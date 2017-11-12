@@ -1,4 +1,7 @@
-#Default is "World!"
-name = ARVG.first || "World"
+require 'greeter'
 
-puts "Hello, #{name}!"
+# Default is World
+name = ARGV.first || "World"
+
+greeter = Greeter.new(name)
+puts greeter.greet
